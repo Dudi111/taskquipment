@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.VehicalActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Choose Radius"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:id="@+id/tv_radius"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/maincard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_radius"
+        app:cardCornerRadius="5dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upto 1KM"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:id="@+id/tv_1km"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upto 2KM"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:id="@+id/tv_2km"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upto 5KM"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:id="@+id/tv_5km"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upto 10KM"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:id="@+id/tv_10km"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEARCH"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maincard"
+        android:id="@+id/btn_search"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
